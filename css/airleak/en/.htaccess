@@ -1,0 +1,5 @@
+
+AuthUserFile "/home/mikamoto/kyowakiko.com/htpasswd/airleak/en/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user
