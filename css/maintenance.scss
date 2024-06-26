@@ -29,9 +29,8 @@ header
   width: 100%;
 }
 
-.header-top {
-  background-color: #4193db;
-  // box-shadow: inset 0px 0px 15px 3px rgb(0 0 0 / 20%);
+.header {
+  background-color: #fff;
 
   @include tab {
     border-bottom: 1px #8a8a8a solid;
@@ -51,16 +50,21 @@ header
   }
 
   &__ttl {
-    font-size: 22px;
+    max-width: 250px;
 
     @include tab {
-      font-size: 18px;
+      max-width: 180px;
     }
   }
 
+  &__right {
+    display: flex;
+    gap: 24px;
+  }
+
   &__tel {
-    font-size: 22px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 500;
 
     @include tab {
       display: none;
@@ -68,8 +72,43 @@ header
   }
 
   &__time {
-    display: inline-block;
-    margin: 0 0 0 24px;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    margin: 0 0 4px;
+
+
+    @include tab {
+      display: none;
+    }
+  }
+
+  &__siryou {
+    display: block;
+    background-color: #d10000;
+    color: #fff;
+    width: 140px;
+    border-radius: 4px;
+    line-height: 14px;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+
+    @include tab {
+      display: none;
+    }
+  }
+
+  &__contact {
+    display: block;
+    background-color: #1da348;
+    color: #fff;
+    width: 140px;
+    border-radius: 4px;
+    line-height: 14px;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
 
     @include tab {
       display: none;
@@ -149,46 +188,7 @@ header
   }
 }
 
-.header-bottom {
-  background-color: #bbdcf9;
 
-  @include tab {
-    display: none;
-  }
-
-  &__inner {
-    display: flex;
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 12px 8px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__nav {
-    display: flex;
-  }
-
-  &__nav-item {
-    margin: 0 16px 0 0;
-
-    @include pc {
-      margin: 0 8px 0 0;
-      font-size: 14px;
-    }
-  }
-
-  &__download-link {
-    display: block;
-    background-color: #d10000;
-    color: #fff;
-    padding: 12px 18px;
-
-    @include pc {
-      font-size: 14px;
-    }
-  }
-}
 
 .header-sp {
   position: fixed;
@@ -247,71 +247,207 @@ header
 main-visual
  ================================= */
 .main-visual {
-  background-image: url(../img/main-visual-img.jpg);
-  position: relative;
-  height: 450px;
-  background-size: cover;
-  background-position: center;
-  margin: 108px 0 0 0;
+  background-color: #e9e9e9;
+
+  padding: 64px 12px 60px;
 
   @include tab {
-    position: static;
-    margin: 57px 0 0 0;
-    height: auto;
+    padding: 57px 0 40px;
   }
 
   &__inner {
-    background-color: rgba(26, 26, 26, 0.8);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 24px 18px 18px;
-    width: 70%;
-    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
 
-    @include tab {
-      position: static;
-      transform: translate(0, 0);
-      width: 100%;
-    }
+    @include tab {}
   }
 
   &__top-text {
-    font-size: 36px;
-    font-weight: 900;
-    color: #fff;
-    line-height: 50px;
-    margin: 0 0 28px;
+    color: #25237b;
+    font-weight: bold;
+    margin: 60px 0 0;
+    font-size: 18px;
 
-    @include pc {
-      font-size: 24px;
-      line-height: 30px;
+    @include tab{
+      font-size: 15px;
+    background-color: #fff;
+    margin:0;
+    padding: 12px;
+    text-align: center;
+
+
     }
   }
 
   &__bottom-text {
-    font-size: 16px;
-    font-weight: 900;
-    color: #fff;
-    line-height: 26px;
-    margin: 0 0 16px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 60px 0 0 60px;
+    line-height: 1.7;
 
-    @include pc {
-      font-size: 16px;
-      line-height: 24px;
-    }
+    @include tab{
+      font-size: 17px;
+      width: 290px;
+      margin: 40px auto 0 ;
+      transform: translateX(-8px);
 
-    @include tab {
-      text-align: left;
     }
   }
 
-  &__link {
-    display: inline-block;
+  &__img {
+    max-width: 720px;
+    margin: 0 auto 24px;
+
+    @include tab{
+      max-width: 520px;
+      padding: 0 20px;
+
+    }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    @include tab{
+      gap: 18px;
+
+    }
+  }
+
+  &__btn {
+    display: block;
+    background-color: #1da348;
+    color: #fff;
+    width: 220px;
+    border-radius: 4px;
+    line-height: 14px;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+
+    @include tab{
+      width: 150px;
+      padding: 16px 0;
+
+    }
+
+    span {
+      font-size: 80%;
+      display: block;
+      margin: 0 0 4px;
+
+      @include tab{
+      display: none;
+      }
+    }
+
+    &--contact {
+      background-color: #d10000;
+
+    }
+
+  }
+
+
+}
+
+/* =================================
+追従フォーム
+ ================================= */
+
+
+
+.side-contact {
+  position: fixed;
+  background:#fff;
+  color: #fff;
+  bottom: 40px;
+  right: 0;
+  padding: 32px 0;
+  font-size: 18px;
+  text-align: center;
+  line-height: 22px;
+  width: 240px;
+  z-index: 400;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
+
+  @include tab{
+    display: none;
+    }
+
+
+&__ttl {
+  color: #25237b;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 16px;
+
+  span {
+    display: block;
+    font-size: 85%;
+    margin: 16px 0 0;
+  }
+}
+
+&__text {
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 0 20px;
+}
+
+&__form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+  &__close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    z-index: 10;
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 500;color: #000;
+
+    @include pc {
+      top: 1px;
+      right: 2px;
+    }
+
+
+    &:hover {
+      opacity: 1;
+    }
+
+    
+  }
+
+  &__btn {
+    display: block;
     background-color: #d10000;
     color: #fff;
-    padding: 12px 40px;
+    width: 200px;
+    border-radius: 4px;
+    line-height: 14px;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto;
+
+    span {
+      font-size: 80%;
+      display: block;
+      margin: 0 0 4px;
+
+    }
   }
 }
 
@@ -319,51 +455,12 @@ main-visual
 problems-section
  ================================= */
 
-.problems-section {
-
-
-  &__ttl {}
-
-  &__content {
-    display: flex;
-    justify-content: space-between;
-
-    @include tab {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  &__item {
-    width: 31%;
-    background-color: #e9e9e9;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 24px 16px;
-
-    @include tab {
-      width: 90%;
-      margin: 0 0 16px;
-    }
-  }
-
-  &__item-ttl {
-    text-align: center;
-    font-size: 22px;
-    line-height: 30px;
-    margin: 0 0 16px;
-
-    @include tab {
-      font-size: 18px;
-      line-height: 24px;
-    }
-  }
-}
 
 /* =================================
 ロゴ
  ================================= */
 
- .top-logo-section {
+.top-logo-section {
 
   &__ {}
 
@@ -407,7 +504,7 @@ problems-section
 こんなお悩みや不安はありませんか？
  ================================= */
 
- .top-worries {
+.top-worries {
 
   &__content {
     display: flex;
@@ -415,12 +512,12 @@ problems-section
     margin: 0 auto 60px;
     justify-content: center;
     padding: 0 16px;
-  
 
-    @include tab{
+
+    @include tab {
       flex-direction: column;
       align-items: center;
-      gap: 24px;    
+      gap: 24px;
       margin: 0 auto 24px;
 
     }
@@ -432,15 +529,15 @@ problems-section
     border-right: #e9e9e9 1px solid;
     width: calc((100%) / 3);
 
-    &:last-of-type{
+    &:last-of-type {
       border-right: none;
     }
 
-    @include tab{
-    width: 100%;
-    max-width: 500px;
-    border-right: none;
-    padding: 0;
+    @include tab {
+      width: 100%;
+      max-width: 500px;
+      border-right: none;
+      padding: 0;
 
 
     }
@@ -454,26 +551,26 @@ problems-section
     padding: 2px;
     margin: 0 0 40px;
 
-    @include tab{
-    width: 200px;
-    margin: 0 auto 28px;
+    @include tab {
+      width: 200px;
+      margin: 0 auto 28px;
     }
-    
+
   }
 
   &__item-img-wrap {
 
-    @include tab{
-    display: flex;
-    gap: 24px;
-  
+    @include tab {
+      display: flex;
+      gap: 24px;
+
     }
   }
 
   &__item-img {
     margin: 0 0 32px;
 
-    @include tab{
+    @include tab {
       width: calc((100% - 24px) / 2);
     }
   }
@@ -515,7 +612,7 @@ problems-section
 メンテンナンスサービスの特長
  ================================= */
 
- .top-features {
+.top-features {
 
   &__ {}
 
@@ -558,7 +655,7 @@ problems-section
 メンテンナンス機器について
  ================================= */
 
- .top-about {
+.top-about {
 
   &__ {}
 
@@ -601,14 +698,14 @@ problems-section
 料金プランについて
  ================================= */
 
- .top-price {
+.top-price {
 
   &__content {
     max-width: 920px;
     margin: 0 auto;
     padding: 0 16px;
 
-    @include tab{
+    @include tab {
       max-width: 520px;
 
     }
@@ -653,7 +750,7 @@ problems-section
 導入事例
  ================================= */
 
- .top-case {
+.top-case {
 
   &__ {}
 
@@ -696,7 +793,7 @@ problems-section
 ロゴ
  ================================= */
 
- .bottom-logo-section {
+.bottom-logo-section {
 
   &__ {}
 
@@ -740,7 +837,7 @@ problems-section
 ご利用の流れ
  ================================= */
 
- .top-flow {
+.top-flow {
 
   &__ {}
 
@@ -783,7 +880,7 @@ problems-section
 よくある質問
  ================================= */
 
- .top-faq {
+.top-faq {
 
   &__ {}
 
@@ -826,7 +923,7 @@ problems-section
 お問い合わせ
  ================================= */
 
- .top-contact {
+.top-contact {
 
   &__ {}
 
@@ -869,7 +966,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -912,7 +1009,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -955,7 +1052,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -998,7 +1095,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -1041,7 +1138,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -1084,7 +1181,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -1127,7 +1224,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -1170,7 +1267,7 @@ problems-section
 
  ================================= */
 
- .aaa {
+.aaa {
 
   &__ {}
 
@@ -1264,7 +1361,8 @@ list-section
   &__lead-text {}
 
   &__content {
-max-width: 900px;
+    max-width: 900px;
+
     @include tab {
       overflow-x: scroll;
     }
@@ -1276,8 +1374,8 @@ max-width: 900px;
     white-space: nowrap;
     margin: 0 auto;
 
-    @include tab{
-    font-size: 14px;
+    @include tab {
+      font-size: 14px;
     }
   }
 
@@ -1648,12 +1746,12 @@ introduction-section
     display: block;
     width: 340px;
     background-color: #d10000;
-    padding: 16px ;
+    padding: 16px;
     margin: 0 auto 40px;
     text-align: center;
     color: #fff;
 
-    @include sp{
+    @include sp {
       width: 240px;
       font-size: 15px;
       line-height: 18px;
