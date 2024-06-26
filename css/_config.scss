@@ -35,7 +35,6 @@ p {
 }
 
 a:hover {
-  text-decoration: underline;
   opacity: 0.5;
 }
 
@@ -51,6 +50,162 @@ li {
   list-style: none;
   font-size: 16px;
 }
+
+.pc-block {
+  display: block;
+
+  @include tab {
+    display: none;
+  }
+}
+
+.sp-block {
+  display: none;
+
+  @include tab {
+    display: block;
+  }
+}
+
+.blue {
+  color: #0071bc;
+}
+
+.section-style {
+  padding: 60px 0 0;
+
+  @include tab {
+    padding: 40px 0 0;
+  }
+}
+
+
+.section-style02 {
+  padding: 80px 0;
+
+  @include tab {
+    padding: 40px 0;
+  }
+}
+
+.section-ttl {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 60px;
+  line-height: 1.8;
+
+  @include tab {
+    font-size: 20px;
+    margin: 0 0 24px;
+    line-height: 26px;
+  }
+
+  &__span {
+    color: #0071bc;
+font-size: 85%;
+  }
+}
+
+
+.gray-part {
+  background-color: #e9e9e9;
+  padding: 80px 12px 40px;
+  position: relative;
+
+  @include tab {
+    padding: 40px 12px 28px;
+
+  }
+
+  &:before {
+    content: url(../img/maintenance/gray-part-arrow.png);
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 0;
+    text-align: right;
+
+    @include tab {
+      transform: translateX(50%) scale(0.5);
+      top: -12px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.5;
+    margin: 0 0 34px;
+
+    @include sp{
+      font-size: 18px;
+      margin: 0 0 24px;
+
+    }
+  }
+
+  &__btn {
+    color: #fff;
+    text-align: center;
+    background-color: #1da348;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    padding: 12px 0;
+    border-radius: 6px;
+    
+    @include tab{
+      line-height: 0;
+      width: 180px;
+      padding: 24px 0;
+      font-size: 16px;
+
+    }
+
+  }
+
+  &__btn-span {
+    font-size: 75%;
+    display: inline-block;
+    margin: 0 0 6px;
+
+    @include tab{
+    display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sp-none {
   display: block;
@@ -88,18 +243,7 @@ li {
   }
 }
 
-.section-ttl {
-  font-size: 28px;
-  text-align: center;
-  margin: 0 0 32px;
-  line-height: 32px;
 
-  @include tab {
-    font-size: 20px;
-    margin: 0 0 16px;
-    line-height: 26px;
-  }
-}
 
 .section-ttl__lead-text {
   font-size: 28px;
@@ -143,7 +287,8 @@ li {
 
 .calculation-btn {
   position: fixed;
-  background: rgba(107, 187, 199, 0.6);  color: #fff;
+  background: rgba(107, 187, 199, 0.6);
+  color: #fff;
   bottom: 100px;
   right: 12px;
   padding: 20px 0;
@@ -154,7 +299,7 @@ li {
   width: 180px;
   z-index: 400;
 
-  @include sp{
+  @include sp {
     width: 120px;
     font-size: 14px;
 
@@ -179,7 +324,7 @@ li {
     cursor: pointer;
     z-index: 500;
 
-    @include pc{
+    @include pc {
       top: 1px;
       right: 2px;
     }
@@ -205,7 +350,7 @@ li {
   width: 180px;
   z-index: 400;
 
-  @include sp{
+  @include sp {
     width: 120px;
     font-size: 14px;
 
@@ -226,7 +371,7 @@ li {
     font-size: 24px;
     cursor: pointer;
 
-    @include pc{
+    @include pc {
       top: 2px;
       right: 2px;
     }
@@ -242,12 +387,35 @@ li {
 }
 
 @keyframes fluffy1 {
-  0% { transform:translateY(0) }
-  5% { transform:translateY(0) }
-  10% { transform:translateY(0) }
-  20% { transform:translateY(-10px) }
-  25% { transform:translateY(0) }
-  30% { transform:translateY(-10px) }
-  50% { transform:translateY(0) }
-  100% { transform:translateY(0) }
+  0% {
+    transform: translateY(0)
+  }
+
+  5% {
+    transform: translateY(0)
+  }
+
+  10% {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(-10px)
+  }
+
+  25% {
+    transform: translateY(0)
+  }
+
+  30% {
+    transform: translateY(-10px)
+  }
+
+  50% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
 }

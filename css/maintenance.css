@@ -18,7 +18,6 @@ p {
 }
 
 a:hover {
-  text-decoration: underline;
   opacity: 0.5;
 }
 
@@ -33,6 +32,130 @@ ol,
 li {
   list-style: none;
   font-size: 16px;
+}
+
+.pc-block {
+  display: block;
+}
+@media (max-width: 780px) {
+  .pc-block {
+    display: none;
+  }
+}
+
+.sp-block {
+  display: none;
+}
+@media (max-width: 780px) {
+  .sp-block {
+    display: block;
+  }
+}
+
+.blue {
+  color: #0071bc;
+}
+
+.section-style {
+  padding: 60px 0 0;
+}
+@media (max-width: 780px) {
+  .section-style {
+    padding: 40px 0 0;
+  }
+}
+
+.section-style02 {
+  padding: 80px 0;
+}
+@media (max-width: 780px) {
+  .section-style02 {
+    padding: 40px 0;
+  }
+}
+
+.section-ttl {
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 60px;
+  line-height: 1.8;
+}
+@media (max-width: 780px) {
+  .section-ttl {
+    font-size: 20px;
+    margin: 0 0 24px;
+    line-height: 26px;
+  }
+}
+.section-ttl__span {
+  color: #0071bc;
+  font-size: 85%;
+}
+
+.gray-part {
+  background-color: #e9e9e9;
+  padding: 80px 12px 40px;
+  position: relative;
+}
+@media (max-width: 780px) {
+  .gray-part {
+    padding: 40px 12px 28px;
+  }
+}
+.gray-part:before {
+  content: url(../img/maintenance/gray-part-arrow.png);
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  top: 0;
+  text-align: right;
+}
+@media (max-width: 780px) {
+  .gray-part:before {
+    transform: translateX(50%) scale(0.5);
+    top: -12px;
+  }
+}
+.gray-part__text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0 0 34px;
+}
+@media (max-width: 600px) {
+  .gray-part__text {
+    font-size: 18px;
+    margin: 0 0 24px;
+  }
+}
+.gray-part__btn {
+  color: #fff;
+  text-align: center;
+  background-color: #1da348;
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 12px 0;
+  border-radius: 6px;
+}
+@media (max-width: 780px) {
+  .gray-part__btn {
+    line-height: 0;
+    width: 180px;
+    padding: 24px 0;
+    font-size: 16px;
+  }
+}
+.gray-part__btn-span {
+  font-size: 75%;
+  display: inline-block;
+  margin: 0 0 6px;
+}
+@media (max-width: 780px) {
+  .gray-part__btn-span {
+    display: none;
+  }
 }
 
 .sp-none {
@@ -72,20 +195,6 @@ li {
   .section-wrap--gray {
     font-size: 20px;
     padding: 40px 8px;
-  }
-}
-
-.section-ttl {
-  font-size: 28px;
-  text-align: center;
-  margin: 0 0 32px;
-  line-height: 32px;
-}
-@media (max-width: 780px) {
-  .section-ttl {
-    font-size: 20px;
-    margin: 0 0 16px;
-    line-height: 26px;
   }
 }
 
@@ -551,6 +660,135 @@ problems-section
   }
 }
 
+/* =================================
+ロゴ
+ ================================= */
+/* =================================
+こんなお悩みや不安はありませんか？
+ ================================= */
+.top-worries__content {
+  display: flex;
+  max-width: 820px;
+  margin: 0 auto 60px;
+  justify-content: center;
+  padding: 0 16px;
+}
+@media (max-width: 780px) {
+  .top-worries__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto 24px;
+  }
+}
+.top-worries__item {
+  padding: 0 40px;
+  border-right: #e9e9e9 1px solid;
+  width: 33.3333333333%;
+}
+.top-worries__item:last-of-type {
+  border-right: none;
+}
+@media (max-width: 780px) {
+  .top-worries__item {
+    width: 100%;
+    max-width: 500px;
+    border-right: none;
+    padding: 0;
+  }
+}
+.top-worries__item-ttl {
+  text-align: center;
+  font-weight: bold;
+  border: #000 1px solid;
+  background-color: #eef6fd;
+  padding: 2px;
+  margin: 0 0 40px;
+}
+@media (max-width: 780px) {
+  .top-worries__item-ttl {
+    width: 200px;
+    margin: 0 auto 28px;
+  }
+}
+@media (max-width: 780px) {
+  .top-worries__item-img-wrap {
+    display: flex;
+    gap: 24px;
+  }
+}
+.top-worries__item-img {
+  margin: 0 0 32px;
+}
+@media (max-width: 780px) {
+  .top-worries__item-img {
+    width: calc((100% - 24px) / 2);
+  }
+}
+.top-worries__item-img-text {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+/* =================================
+メンテンナンスサービスの特長
+ ================================= */
+/* =================================
+メンテンナンス機器について
+ ================================= */
+/* =================================
+料金プランについて
+ ================================= */
+.top-price__content {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (max-width: 780px) {
+  .top-price__content {
+    max-width: 520px;
+  }
+}
+/* =================================
+導入事例
+ ================================= */
+/* =================================
+ロゴ
+ ================================= */
+/* =================================
+ご利用の流れ
+ ================================= */
+/* =================================
+よくある質問
+ ================================= */
+/* =================================
+お問い合わせ
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
+/* =================================
+
+ ================================= */
 /* =================================
 ratio-section
  ================================= */
