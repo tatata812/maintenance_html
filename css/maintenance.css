@@ -1134,10 +1134,25 @@ main-visual
 /* =================================
 よくある質問
  ================================= */
+.top-faq {
+  border-bottom: #e9e9e9 1px solid;
+}
 .top-faq__content {
   max-width: 940px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   padding: 0 16px;
+}
+.top-faq__content:last-child {
+  margin: 0 auto;
+}
+.top-faq__ttl {
+  background-color: #e0eefb;
+  width: 180px;
+  text-align: center;
+  border: 1px solid #8a8a8a;
+  padding: 8px;
+  font-weight: normal;
+  margin: 0 0 24px;
 }
 .top-faq__item {
   border-top: #e9e9e9 solid 1px;
