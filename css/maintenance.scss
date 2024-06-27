@@ -282,13 +282,13 @@ main-visual
   &__bottom-text {
     font-size: 20px;
     font-weight: bold;
-    margin: 60px 0 0 60px;
+    margin: 48px 0 0 60px;
     line-height: 1.7;
 
     @include tab{
       font-size: 17px;
       width: 290px;
-      margin: 40px auto 0 ;
+      margin: 32px auto 0 ;
       transform: translateX(-8px);
 
     }
@@ -296,11 +296,13 @@ main-visual
 
   &__img {
     max-width: 720px;
-    margin: 0 auto 24px;
+    margin: -30px auto 0;
 
     @include tab{
       max-width: 520px;
       padding: 0 20px;
+      margin: -4px auto 12px;
+
 
     }
   }
@@ -450,10 +452,6 @@ main-visual
     }
   }
 }
-
-/* =================================
-problems-section
- ================================= */
 
 
 /* =================================
@@ -614,19 +612,95 @@ problems-section
 
 .top-features {
 
-  &__ {}
+  &__content {
 
-  &__ {}
+  }
 
-  &__ {}
+  &__item {
+    margin: 0 0 60px;
+  }
 
-  &__ {}
+  &__item-ttl {
+    max-width: 550px;
+    margin: 0 auto 18px;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    padding: 0 16px;
 
-  &__ {}
+    &:before {
+      content: url(../img/maintenance/features-check.png);
+      position: absolute;
+      top: 5px;
+      left: -50px;
+      transform: scale(0.7);
+    }
 
-  &__ {}
+    @include sp{
+    margin: 0 0 18px 60px;
+    font-size: 18px;
 
-  &__ {}
+    &:before {
+      top: 15px;
+      left: -40px;
+      transform: scale(0.7);
+    }
+
+    }
+  }
+
+  &__item-text {
+    max-width: 550px;
+    margin: 0 auto 22px;
+    padding: 0 16px;
+
+  }
+
+  &__youtebe-wrap {
+    display: flex;
+    max-width: 920px;
+    margin: 0 auto;
+    gap: 16px;
+    padding: 0 16px;
+
+    @include tab{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__youtebe-item {
+width: calc((100% - 32px) / 3);
+
+@include tab{
+width: 100%;
+max-width: 480px;
+}
+
+&--sp-none {
+  @include tab{
+  display: none;
+  }
+}
+  }
+
+  &__youtebe-inner {
+    border-radius: 8px;
+    height: 0;
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    background-color: #e9e9e9;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
 
   &__ {}
 
@@ -656,22 +730,68 @@ problems-section
  ================================= */
 
 .top-about {
+  border-bottom: #e9e9e9 1px solid;
 
-  &__ {}
+  &__content {
+    display: flex;
+    max-width: 940px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0 16px;
 
-  &__ {}
+    @include tab{
+      flex-direction: column;
+      gap: 60px;
 
-  &__ {}
+    }
+  }
 
-  &__ {}
+  &__item {
+    width: calc((100% - 40px) / 2);
 
-  &__ {}
+    @include sp{
+    width: 100%;
+    }
+  }
 
-  &__ {}
+  &__tag-wrap {
+    display: flex;
+  gap:8px;
+  margin: 0 0 8px;
+  }
 
-  &__ {}
+  &__tag {
+    background-color: #e0eefb;
+    border: #000 1px solid;
+    padding: 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
 
-  &__ {}
+  &__img {
+    display: block;
+    margin: 0 0 8px;
+
+    img {
+      aspect-ratio: 5 / 3;
+    object-fit: cover;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: #4193db;
+    margin: 0 0 16px;
+  }
+
+  &__ttl {
+    margin: 0 0 12px;
+  }
+
+  &__text {}
 
   &__ {}
 
@@ -702,11 +822,12 @@ problems-section
 
   &__content {
     max-width: 920px;
-    margin: 0 auto;
+    margin: 0 auto 60px;
     padding: 0 16px;
 
     @include tab {
       max-width: 520px;
+      margin: 0 auto 40px;
 
     }
   }
@@ -752,29 +873,75 @@ problems-section
 
 .top-case {
 
-  &__ {}
+  &__content {
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto 60px;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 0 16px;
 
-  &__ {}
+    @include tab{
+      flex-direction: column;
+      gap: 60px;
+      margin: 0 auto 40px;
+      align-items: center;
 
-  &__ {}
+    }
+  }
 
-  &__ {}
+  &__item {
+    width: calc((100% - 48px) / 3);
+    margin: 0 0 40px;
 
-  &__ {}
+    @include tab(){
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
 
-  &__ {}
+    }
+  }
+  &__ttl {
+    padding: 0 0 0 8px;
+    margin: 0 0 4px;
+  }
 
-  &__ {}
+  &__price {
+    margin: 0 0 8px;
 
-  &__ {}
+  }
 
-  &__ {}
+  &__box {
+    border: #e9e9e9 1px solid;
+  }
 
-  &__ {}
+  &__img {
+    display: block;
+    margin: 0 0 8px;
 
-  &__ {}
+    img {
+      aspect-ratio: 5 / 3;
+    object-fit: cover;
+    }
+  }
 
-  &__ {}
+  &__text-box {
+    padding:  12px;
+  }
+
+  &__lead {
+    margin: 0 0 8px;
+    font-weight: bold;
+
+  }
+
+  &__blue {
+    font-size: 13px;
+    margin: 0 0 12px;
+
+  }
+
+  &__text {}
 
   &__ {}
 
@@ -789,48 +956,6 @@ problems-section
 
 }
 
-/* =================================
-ロゴ
- ================================= */
-
-.bottom-logo-section {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
 
 
 /* =================================
@@ -838,14 +963,72 @@ problems-section
  ================================= */
 
 .top-flow {
+  border-bottom: #e9e9e9 1px solid;
 
-  &__ {}
 
-  &__ {}
+  &__content {
+    padding: 0 16px;
+  }
 
-  &__ {}
+  &__item {
+    display: flex;
+    max-width: 920px;
+    margin: 0 auto 70px;
+    background-color: #e9e9e9;
+    padding: 40px;
+    align-items: center;
+    position: relative;
 
-  &__ {}
+    &:last-of-type {
+      margin: 0 auto;
+
+    }
+
+    @include tab{
+      flex-direction: column;
+      gap:18px;
+      padding: 22px;
+
+    }
+
+
+    &:before {
+      content: url(../img/maintenance/flow-arrow.png);
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%)scale(0.5);
+      bottom: -62px;
+      text-align: right;
+  
+    }
+
+    &:last-of-type {
+      &:before {
+display: none;
+      }
+
+    }
+  }
+
+  &__left {
+    width: 28%;
+    font-size: 22px;
+    font-weight: bold;
+
+    @include tab{
+    width: 100%;
+    }
+  }
+
+  &__right {
+    width: 72%;
+    line-height: 1.5;
+
+    @include tab{
+      width: 100%;
+      }
+
+  }
 
   &__ {}
 
@@ -882,15 +1065,57 @@ problems-section
 
 .top-faq {
 
-  &__ {}
+  &__content {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
 
-  &__ {}
+  &__item {
+    border-top: #e9e9e9 solid 1px;
+    border-bottom: #e9e9e9 solid 1px;
+    padding: 8px 0;
 
-  &__ {}
+  }
 
-  &__ {}
+  &__dt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 6px 12px 6px 40px;
 
-  &__ {}
+
+    &::before {
+      content: 'Q';
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+  }
+
+  &__menu-mark {
+
+  }
+
+  &__dd {
+    display: none;
+    background-color: #e0f0ff;
+    position: relative;
+    padding: 12px 12px 12px 40px;
+    margin: 4px 0 0;
+
+    &::before {
+      content: 'A';
+      position: absolute;
+      top: 13px;
+      left: 15px;
+    }
+
+
+
+
+  }
 
   &__ {}
 

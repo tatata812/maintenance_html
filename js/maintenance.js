@@ -20,6 +20,16 @@ $(function () {
     $(this).parent().hide();
   });
 
+  $(".top-faq__dt").click(function(){
+    $(this).next(".top-faq__dd").slideToggle(300);
+    var mark = $(this).find(".top-faq__menu-mark");
+    if (mark.text() === "＋") {
+        mark.text("−");
+    } else {
+        mark.text("＋");
+    }
+});
+
   var headerHight = 80;
     $('a[href^="#"]').click(function () {
       var href = $(this).attr("href");

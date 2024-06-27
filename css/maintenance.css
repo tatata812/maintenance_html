@@ -17,7 +17,7 @@ a {
 }
 
 p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
 }
 
@@ -87,7 +87,7 @@ li {
 @media (max-width: 780px) {
   .section-ttl {
     font-size: 20px;
-    margin: 0 0 24px;
+    margin: 0 0 32px;
     line-height: 26px;
   }
 }
@@ -143,6 +143,15 @@ li {
   padding: 12px 0;
   border-radius: 6px;
 }
+.gray-part__btn--flow {
+  margin: 18px 0 0;
+  padding: 6px 0;
+}
+@media (max-width: 780px) {
+  .gray-part__btn--flow {
+    margin: 16px auto 0;
+  }
+}
 @media (max-width: 780px) {
   .gray-part__btn {
     line-height: 0;
@@ -150,6 +159,16 @@ li {
     padding: 24px 0;
     font-size: 16px;
   }
+}
+.gray-part__btn--download {
+  background-color: #d10000;
+  width: 320px;
+  margin: 0 auto 12px;
+  padding: 18px 0;
+}
+.gray-part__btn--contact {
+  width: 320px;
+  padding: 18px 0;
 }
 .gray-part__btn-span {
   font-size: 75%;
@@ -624,25 +643,26 @@ main-visual
 .main-visual__bottom-text {
   font-size: 20px;
   font-weight: bold;
-  margin: 60px 0 0 60px;
+  margin: 48px 0 0 60px;
   line-height: 1.7;
 }
 @media (max-width: 780px) {
   .main-visual__bottom-text {
     font-size: 17px;
     width: 290px;
-    margin: 40px auto 0;
+    margin: 32px auto 0;
     transform: translateX(-8px);
   }
 }
 .main-visual__img {
   max-width: 720px;
-  margin: 0 auto 24px;
+  margin: -30px auto 0;
 }
 @media (max-width: 780px) {
   .main-visual__img {
     max-width: 520px;
     padding: 0 20px;
+    margin: -4px auto 12px;
   }
 }
 .main-visual__btn-wrap {
@@ -771,9 +791,6 @@ main-visual
 }
 
 /* =================================
-problems-section
- ================================= */
-/* =================================
 ロゴ
  ================================= */
 /* =================================
@@ -847,34 +864,312 @@ problems-section
 /* =================================
 メンテンナンスサービスの特長
  ================================= */
+.top-features__item {
+  margin: 0 0 60px;
+}
+.top-features__item-ttl {
+  max-width: 550px;
+  margin: 0 auto 18px;
+  font-size: 20px;
+  line-height: 1.5;
+  position: relative;
+  padding: 0 16px;
+}
+.top-features__item-ttl:before {
+  content: url(../img/maintenance/features-check.png);
+  position: absolute;
+  top: 5px;
+  left: -50px;
+  transform: scale(0.7);
+}
+@media (max-width: 600px) {
+  .top-features__item-ttl {
+    margin: 0 0 18px 60px;
+    font-size: 18px;
+  }
+  .top-features__item-ttl:before {
+    top: 15px;
+    left: -40px;
+    transform: scale(0.7);
+  }
+}
+.top-features__item-text {
+  max-width: 550px;
+  margin: 0 auto 22px;
+  padding: 0 16px;
+}
+.top-features__youtebe-wrap {
+  display: flex;
+  max-width: 920px;
+  margin: 0 auto;
+  gap: 16px;
+  padding: 0 16px;
+}
+@media (max-width: 780px) {
+  .top-features__youtebe-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.top-features__youtebe-item {
+  width: calc((100% - 32px) / 3);
+}
+@media (max-width: 780px) {
+  .top-features__youtebe-item {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+@media (max-width: 780px) {
+  .top-features__youtebe-item--sp-none {
+    display: none;
+  }
+}
+.top-features__youtebe-inner {
+  border-radius: 8px;
+  height: 0;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+.top-features__youtebe-inner iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /* =================================
 メンテンナンス機器について
  ================================= */
+.top-about {
+  border-bottom: #e9e9e9 1px solid;
+}
+.top-about__content {
+  display: flex;
+  max-width: 940px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+@media (max-width: 780px) {
+  .top-about__content {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+.top-about__item {
+  width: calc((100% - 40px) / 2);
+}
+@media (max-width: 600px) {
+  .top-about__item {
+    width: 100%;
+  }
+}
+.top-about__tag-wrap {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+.top-about__tag {
+  background-color: #e0eefb;
+  border: #000 1px solid;
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.top-about__img {
+  display: block;
+  margin: 0 0 8px;
+}
+.top-about__img img {
+  aspect-ratio: 5/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.top-about__link {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: #4193db;
+  margin: 0 0 16px;
+}
+.top-about__ttl {
+  margin: 0 0 12px;
+}
 /* =================================
 料金プランについて
  ================================= */
 .top-price__content {
   max-width: 920px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   padding: 0 16px;
 }
 @media (max-width: 780px) {
   .top-price__content {
     max-width: 520px;
+    margin: 0 auto 40px;
   }
 }
 /* =================================
 導入事例
  ================================= */
-/* =================================
-ロゴ
- ================================= */
+.top-case__content {
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto 60px;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+@media (max-width: 780px) {
+  .top-case__content {
+    flex-direction: column;
+    gap: 60px;
+    margin: 0 auto 40px;
+    align-items: center;
+  }
+}
+.top-case__item {
+  width: calc((100% - 48px) / 3);
+  margin: 0 0 40px;
+}
+@media (max-width: 780px) {
+  .top-case__item {
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
+  }
+}
+.top-case__ttl {
+  padding: 0 0 0 8px;
+  margin: 0 0 4px;
+}
+.top-case__price {
+  margin: 0 0 8px;
+}
+.top-case__box {
+  border: #e9e9e9 1px solid;
+}
+.top-case__img {
+  display: block;
+  margin: 0 0 8px;
+}
+.top-case__img img {
+  aspect-ratio: 5/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.top-case__text-box {
+  padding: 12px;
+}
+.top-case__lead {
+  margin: 0 0 8px;
+  font-weight: bold;
+}
+.top-case__blue {
+  font-size: 13px;
+  margin: 0 0 12px;
+}
 /* =================================
 ご利用の流れ
  ================================= */
+.top-flow {
+  border-bottom: #e9e9e9 1px solid;
+}
+.top-flow__content {
+  padding: 0 16px;
+}
+.top-flow__item {
+  display: flex;
+  max-width: 920px;
+  margin: 0 auto 70px;
+  background-color: #e9e9e9;
+  padding: 40px;
+  align-items: center;
+  position: relative;
+}
+.top-flow__item:last-of-type {
+  margin: 0 auto;
+}
+@media (max-width: 780px) {
+  .top-flow__item {
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px;
+  }
+}
+.top-flow__item:before {
+  content: url(../img/maintenance/flow-arrow.png);
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%) scale(0.5);
+  bottom: -62px;
+  text-align: right;
+}
+.top-flow__item:last-of-type:before {
+  display: none;
+}
+.top-flow__left {
+  width: 28%;
+  font-size: 22px;
+  font-weight: bold;
+}
+@media (max-width: 780px) {
+  .top-flow__left {
+    width: 100%;
+  }
+}
+.top-flow__right {
+  width: 72%;
+  line-height: 1.5;
+}
+@media (max-width: 780px) {
+  .top-flow__right {
+    width: 100%;
+  }
+}
 /* =================================
 よくある質問
  ================================= */
+.top-faq__content {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.top-faq__item {
+  border-top: #e9e9e9 solid 1px;
+  border-bottom: #e9e9e9 solid 1px;
+  padding: 8px 0;
+}
+.top-faq__dt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 6px 12px 6px 40px;
+}
+.top-faq__dt::before {
+  content: "Q";
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+.top-faq__dd {
+  display: none;
+  background-color: #e0f0ff;
+  position: relative;
+  padding: 12px 12px 12px 40px;
+  margin: 4px 0 0;
+}
+.top-faq__dd::before {
+  content: "A";
+  position: absolute;
+  top: 13px;
+  left: 15px;
+}
 /* =================================
 お問い合わせ
  ================================= */
