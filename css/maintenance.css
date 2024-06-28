@@ -164,11 +164,11 @@ li {
   background-color: #d10000;
   width: 320px;
   margin: 0 auto 12px;
-  padding: 18px 0;
+  padding: 22px 0;
 }
 .gray-part__btn--contact {
   width: 320px;
-  padding: 18px 0;
+  padding: 22px 0;
 }
 .gray-part__btn-span {
   font-size: 75%;
@@ -311,7 +311,7 @@ li {
 .side-btn {
   display: none;
   position: fixed;
-  background: rgba(250, 0, 0, 0.6);
+  background: rgba(215, 0, 0, 0.8);
   bottom: 90px;
   right: 12px;
   padding: 16px 0;
@@ -324,7 +324,7 @@ li {
 }
 .side-btn--contact {
   bottom: 24px;
-  background: rgba(7, 183, 54, 0.6);
+  background: rgba(7, 183, 54, 0.8);
 }
 @media (max-width: 780px) {
   .side-btn {
@@ -546,7 +546,7 @@ header
   left: 11px;
   height: 2px;
   border-radius: 5px;
-  background: #000;
+  background: #3e83c5;
   width: 65%;
 }
 .header__open-btn span:nth-of-type(1) {
@@ -600,27 +600,40 @@ header
 }
 .header-sp__tel {
   font-size: 22px;
-  font-weight: 900;
-  display: inline-block;
-  margin: 0 0 8px;
+  color: #25237b;
+  margin: 0 28px 0 0;
 }
-.header-sp__time {
+@media (max-width: 600px) {
+  .header-sp__tel {
+    display: block;
+  }
+}
+.header-sp__tel img {
+  width: 22px;
+  padding: 0 4px 0 0;
+  vertical-align: middle;
+}
+.header-sp__tel--bottom {
+  margin: 0;
+  display: block;
+}
+.header-sp__bottom-tel-wrap {
+  font-size: 15px;
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0 0 60px;
 }
 .header-sp__nav {
-  margin: 0 0 40px;
+  margin: 0 0 60px 22px;
 }
 .header-sp__nav-item {
   margin: 0 0 8px;
 }
 .header-sp__download-link {
-  text-align: center;
-  display: inline-block;
-  line-height: 19px;
-  background-color: #62c0fa;
+  background-color: #d10000;
+  padding: 22px 0;
   color: #fff;
-  padding: 12px;
+  padding: 12px 6px;
+  border-radius: 6px;
 }
 
 /* =================================

@@ -136,7 +136,7 @@ header
       left: 11px;
       height: 2px;
       border-radius: 5px;
-      background: #000;
+      background: #3e83c5;
       width: 65%;
 
       &:nth-of-type(1) {
@@ -213,20 +213,37 @@ header
     transform: translate(-50%, -50%);
   }
 
+
   &__tel {
     font-size: 22px;
-    font-weight: 900;
-    display: inline-block;
-    margin: 0 0 8px;
+    color: #25237b;
+    margin: 0 28px 0 0;
+
+    @include sp{
+    display: block;
+    }
+
+    img {
+      width: 22px;
+      padding: 0 4px 0 0;
+      vertical-align: middle;
+    }
+
+    &--bottom {
+      margin: 0;
+      display: block;
+
+    }
   }
 
-  &__time {
+  &__bottom-tel-wrap {
+    font-size: 15px;
     text-align: center;
-    margin: 0 0 40px;
+    margin: 0 0 60px;
   }
 
   &__nav {
-    margin: 0 0 40px;
+    margin: 0 0 60px 22px;
   }
 
   &__nav-item {
@@ -234,12 +251,11 @@ header
   }
 
   &__download-link {
-    text-align: center;
-    display: inline-block;
-    line-height: 19px;
-    background-color: #62c0fa;
+    background-color: #d10000;
+    padding: 22px 0;
     color: #fff;
-    padding: 12px;
+    padding: 12px 6px;
+    border-radius: 6px;
   }
 }
 
