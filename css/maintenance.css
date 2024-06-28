@@ -1274,17 +1274,6 @@ main-visual
     margin: 0 0 24px;
   }
 }
-.top-contact__text--comp {
-  border-bottom: #25237b 1px solid;
-  padding: 0 0 80px;
-  margin: 0 0 80px;
-}
-@media (max-width: 600px) {
-  .top-contact__text--comp {
-    padding: 0 0 40px;
-    margin: 0 0 40px;
-  }
-}
 .top-contact__top-tel-wrap {
   font-size: 12px;
   padding: 0 8px 2px;
@@ -1353,10 +1342,15 @@ main-visual
   font-size: 24px;
   line-height: 1.8;
   font-weight: bold;
+  border-top: #25237b 1px solid;
+  margin: 80px 0 0;
+  padding: 80px 0 0;
 }
 @media (max-width: 600px) {
   .top-contact__comp-text {
     font-size: 18px;
+    margin: 40px 0 0;
+    padding: 40px 0 0;
   }
 }
 /* =================================
