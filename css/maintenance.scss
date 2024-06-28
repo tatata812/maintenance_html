@@ -32,13 +32,17 @@ header
 .header {
   background-color: #fff;
 
+  &--form {
+    background-color: #e9e9e9;
+  }
+
   @include tab {
     border-bottom: 1px #8a8a8a solid;
   }
 
   &__inner {
     display: flex;
-    max-width: 1080px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 12px 8px;
     justify-content: space-between;
@@ -208,7 +212,7 @@ header
 
   &__inner {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -1198,6 +1202,14 @@ display: none;
     @include sp{
     padding: 40px;
     margin: 0 auto;
+    }
+
+    &--form {
+      background-color: #fff;
+    @include sp{
+      margin: 80px auto 40px;
+
+    }
 
     }
   }
@@ -1216,15 +1228,33 @@ display: none;
     margin: 0 0 24px;
 
     }
-  }
 
+    &--comp {
+      border-bottom: none;
+      line-height: 1.8;
+
+    }
+  }
+  
   &__text {
     text-align: center;
     margin: 0 0 40px;
-
+    
     @include sp{
-    text-align: left;
-    margin: 0 0 24px;
+      text-align: left;
+      margin: 0 0 24px;
+      
+    }
+    
+    &--comp {
+      border-bottom: #25237b 1px solid;
+      padding: 0 0 80px;
+      margin: 0 0 80px;
+
+      @include sp{
+        padding: 0 0 40px;
+        margin: 0 0 40px;
+      }
 
     }
 
@@ -1312,222 +1342,18 @@ display: none;
     text-align: center;
   }
 
-  &__ {}
+  &__comp-text {
+    text-align: center;
+    color: #25237b;
+font-size: 24px;
+line-height: 1.8;
+font-weight: bold;
 
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
+@include sp{
+  font-size: 18px;
 
 }
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-}
-
-/* =================================
-
- ================================= */
-
-.aaa {
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
+  }
 
   &__ {}
 
